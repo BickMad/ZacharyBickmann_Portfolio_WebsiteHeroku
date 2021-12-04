@@ -32,6 +32,10 @@ app.get("/my_trivia", (req, res) => {
     res.render("my_trivia");
 });
 
+app.post("/my_trivia", urlencodedParser, (req, res) => {
+    res.json(req.body);
+});
+
 
 
 const PORT = process.env.PORT || 3000;
