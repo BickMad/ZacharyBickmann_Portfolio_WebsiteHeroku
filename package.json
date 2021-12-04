@@ -4,7 +4,7 @@
   "description": "Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "start": "index.js"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
