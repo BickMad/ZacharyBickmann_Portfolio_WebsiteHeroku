@@ -21,11 +21,11 @@ app.get("/my_fun_facts", (req, res) => {
 });
 
 app.get("/my_blog", (req, res) => {
-    res.render("html/my_blog");
+    res.render("my_blog");
 });
 
 app.get("/my_trivia", (req, res) => {
-    res.render("html/my_trivia");
+    res.render("my_trivia");
 });
 
 
