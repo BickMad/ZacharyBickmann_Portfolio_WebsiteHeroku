@@ -13,11 +13,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/my_resume", (req, res) => {
-    res.render("/html/my_resume.ejs");
+    res.render("/views/html/my_resume");
 });
 
 app.get("/my_fun_facts", (req, res) => {
-    res.render("/html/my_fun_facts");
+    res.render("html/my_fun_facts");
 });
 
 app.get("/my_blog", (req, res) => {
