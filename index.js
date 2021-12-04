@@ -13,19 +13,19 @@ app.get("/", (req, res) => {
 });
 
 app.get("/my_resume", (req, res) => {
-    res.render("/my_resume");
+    res.render("my_resume");
 });
 
 app.get("/my_fun_facts", (req, res) => {
-    res.render("html/my_fun_facts");
+    res.render("my_fun_facts");
 });
 
 app.get("/my_blog", (req, res) => {
-    res.render("/html/my_blog");
+    res.render("html/my_blog");
 });
 
 app.get("/my_trivia", (req, res) => {
-    res.render("/html/my_trivia");
+    res.render("html/my_trivia");
 });
 
 
