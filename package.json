@@ -1,0 +1,23 @@
+{
+  "name": "zacharybickmann_portfolio_hw5",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BickMad/ZacharyBickmann_Portfolio_WebsiteHeroku.git"
+  },
+  "author": "Zachary Bickmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BickMad/ZacharyBickmann_Portfolio_WebsiteHeroku/issues"
+  },
+  "homepage": "https://github.com/BickMad/ZacharyBickmann_Portfolio_WebsiteHeroku#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
