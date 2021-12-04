@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/my_resume", (req, res) => {
-    res.render("/views/html/my_resume");
+    res.render("/my_resume");
 });
 
 app.get("/my_fun_facts", (req, res) => {
