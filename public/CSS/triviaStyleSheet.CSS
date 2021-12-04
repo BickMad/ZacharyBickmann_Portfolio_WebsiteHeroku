@@ -65,8 +65,21 @@ body{
     background-color: #f2bc94;
     color: #f4af1b;
 }
-
-
+h2{
+    text-align: center;
+    display: block;
+    background-color: #00154f;
+    margin: 50px;
+    border: 20px;
+    padding: 8px;
+    border-radius: 20px;
+    
+}
+form{
+    position: absolute;
+    top: 1200px;
+    right: 1000px;
+}
 
 
 
