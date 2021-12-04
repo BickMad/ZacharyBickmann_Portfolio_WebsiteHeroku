@@ -1,10 +1,14 @@
 const express = require("express");
 const ejs = require("ejs");
+const bodyParser = require('body-parser')
+const {check, validationResult} = require('express-validator')
 
 const app = express();
 //Stuff for server
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true}));
+
+const urlencoded = bodyParser.urlencoded({ extended: false})
 
 app.use("/public", express.static(__dirname + "/public"));
 
@@ -28,6 +32,9 @@ app.get("/my_trivia", (req, res) => {
     res.render("my_trivia");
 });
 
+app.post("/my_trivia", urlencodedParser, (req, res) => {
+    res.json(req.body)
+});
 
 
 const PORT = process.env.PORT || 3000;
