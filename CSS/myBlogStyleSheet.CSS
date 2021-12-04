@@ -1,0 +1,165 @@
+.navBar{
+    background: #00154f;
+    color: #f2bc94;
+    height: 150px;
+    padding-left: 18px;
+    border-radius: 5px;
+    border: 5px solid #f4af1b;
+}
+
+.navBar ul, .navBar li{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.navBar ul{
+    width: 100%;
+}
+.navBar li{
+    border: solid 2px;
+    margin: 3px;
+    float:right;
+    display: inline;
+    position: relative;
+    border-radius: 10px;
+}
+.navBar a{
+    float: right;
+    display: block;
+    line-height: 80px;
+    color: #f4af1b;
+    font-size: 35px;
+    text-transform: capitalize;
+    margin: 25px;
+    border: 30px;
+    padding: 5px;
+    
+}
+.navBar li a:hover{
+    opacity: 50%;
+    background-color: #f2bc94;
+    border-radius: 10px;
+   
+}
+.navBar h1{
+    line-height: 90px;
+    position: relative;
+    float: left;
+    font-size: 40px;
+    font-style:unset;
+    color: #f4af1b;
+    margin: 5px;
+    border: 15px;
+    padding: 10px;
+    border-style:dotted;
+    border-color: #f2bc94;
+    font-weight:900;
+    text-decoration: underline; 
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f2bc94;
+    color: #f4af1b;
+}
+h2{
+    font-size: 30px;
+    text-transform: capitalize;
+    text-align: center;
+    background-color: #00154f;
+    margin: 50px;
+    border: 20px;
+    padding: 8px;
+    border-radius: 20px;
+}
+#articleDiv{
+    width: 50%;
+    display: block;
+    align-items: center;
+    background-color: #00154f;
+    color: #f4af1b;
+    margin: 50px;
+    border: 20px;
+    padding: 8px;
+    border-radius: 20px;  
+    text-align: center;
+}
+.divStuff{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+#addReplies{
+    width: 20%;
+    padding: 5px;
+    margin: 10px;
+    background-color: #00154f;
+    color: white;
+    align-self: left;
+}
+#comment{
+    color: white;
+    background-color: #00154f;
+    width: 50%;
+    height: 60px;
+    margin: 20px;
+    border: 10px;
+    padding: 5px;
+}
+input[type=text]:valid{
+    border: red solid 1px;
+}
+#leaveAComment{
+    width: 20%;
+    padding: 5px;
+    background-color: #00154f;
+    color: white;
+    align-self: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin: 20px;
+    border: 10px;
+
+    position: relative;
+
+    height: 2.5rem;
+    background-color: #00154f;
+    color: #f2bc94;
+    height: 100px;
+    border-radius: 0px;
+    border: 4px solid #f4af1b;
+    clear:both;
+}
+footer p{
+    float: right;
+    margin: 20px;
+}
+.copyR{
+float: left;
+margin: 20px;
+}
+.emailA{
+    color: rgb(2, 255, 255);
+}
