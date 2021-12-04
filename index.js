@@ -33,9 +33,20 @@ app.get("/my_trivia", (req, res) => {
     res.render("my_trivia");
 });
 
-app.post("/my_trivia", urlencodedParser, (req, res) => {
-    res.json(req.body);
-});
+app.post("/my_trivia", urlencodedParser,[
+    check('question1', 'Type answer, should be no more or less than 1 character' )
+    .exists()
+    .isLength({ min: 1})
+    .isLength({ max: 1})
+
+], (req, res) => {
+    const errors = validationResult(req)
+    if(!errors.isEmpty()){
+        return res.status(422).jsonp(errors.array())
+    }
+
+
+})
 
 
 
