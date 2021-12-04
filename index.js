@@ -35,13 +35,9 @@ app.get("/my_trivia", (req, res) => {
 
 app.post("/my_trivia", urlencodedParser,[
     check('question1', 'Be sure to type your answer for Q1, also your answer should be no more or less than 1 character' )
-        .exists()
-        .isLength({ min: 1})
-        .isLength({ max: 1}),
+        .isLength({ min: 1}),
     check('question2', 'Be sure to type your ansewr for Q2, also your answer should be no more or less than 1 character' )
-        .exists()
         .isLength({ min: 1})
-        .isLength({ max: 1})
 
 ], (req, res) => {
     const errors = validationResult(req)
