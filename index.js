@@ -2,7 +2,7 @@ const express = require("express");
 const ejs = require("ejs");
 
 const app = express();
-
+//Stuff for server
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true}));
 
