@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
-app.get("/my_resume", (req, res) => {
+app.get("/resume", (req, res) => {
     res.render("/html/my_resume");
 });
 
