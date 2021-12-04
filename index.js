@@ -1,7 +1,7 @@
 const express = require("express");
 const ejs = require("ejs");
-const bodyParser = require('body-parser')
-
+const bodyParser = require('body-parser');
+const{check, validationResult} = require('express-validator');
 
 const app = express();
 //Stuff for server
