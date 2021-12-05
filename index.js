@@ -38,14 +38,27 @@ app.get("/my_trivia", (req, res) => {
 });
 
 app.post("/my_trivia", urlencodedParser, (req, res) => {
-    if(req.body.firstQ === 'a'){
+    if(req.body.firstQ === 'b'){
         app.locals.score++;
         
     }
-    if(req.body.secondQ === 'b'){
+    if(req.body.secondQ === 'c'){
         app.locals.score++;    
         
     }
+    if(req.body.thirdQ === 'd'){
+        app.locals.score++;    
+        
+    }
+    if(req.body.fourthQ === 'a'){
+        app.locals.score++;    
+        
+    }
+    if(req.body.fifthQ === 'c'){
+        app.locals.score++;    
+        
+    }
+    
     
 
     res.render('my_trivia', {score:app.locals.score});

@@ -34,22 +34,37 @@
         </header>
        
         
-        <h2>Welcome to Big Trivia!</h2>
+        <h2>Welcome to Big Trivia! Type answers in lower case form please!</h2>
 
         <form action="/my_trivia" method="POST">
             <div class="questionGroup">
-                <label for="firstQ" class="questionLabel">Q1. What is 1 + 1? [A = 1, B = 2, C = 3, D = 4] Type Answer: </label>
+                <label for="firstQ" class="questionLabel">Q1. What is 1 + 1? [a = 1, b = 2, c = 3, d = 4] Type Answer: </label>
                 <input type="text" class="questionControl" name="firstQ" id="firstQ">
             </div>
 
             <div class="questionGroup">
-                <label for="secondQ" class="questionLabel">Q2. What is 1 + 2? [A = 1, B = 2, C = 3, D = 4] Type Answer: </label>
+                <label for="secondQ" class="questionLabel">Q2. What is 1 + 2? [a = 1, b = 2, c = 3, d = 4] Type Answer: </label>
                 <input type="text" class="questionControl" name="secondQ" id="secondQ">
             </div>
-            <button type="submit" class="ntm ntm-primary">Submit</button>
+
+            <div class="questionGroup">
+                <label for="thirdQ" class="questionLabel">Q3. What is 2 + 2? [a = 1, b = 2, c = 3, d = 4] Type Answer: </label>
+                <input type="text" class="questionControl" name="thirdQ" id="thirdQ">
+            </div>
+
+            <div class="questionGroup">
+                <label for="fourthQ" class="questionLabel">Q4. What is 15 / 3 + 1? [a = 6, b = 4, c = 1, d = 8] Type Answer: </label>
+                <input type="text" class="questionControl" name="fourthQ" id="fourthQ">
+            </div>
+
+            <div class="questionGroup">
+                <label for="fifthQ" class="questionLabel">Q5. What is 10 * 2? [a = 4, b = 7, c = 20, d = 5] Type Answer: </label>
+                <input type="text" class="questionControl" name="fifthQ" id="fifthQ">
+            </div>
+            <button type="submit" class="ntm ntm-primary">Check Score</button>
         </form>
 
-        <h3 class = "h3Score"><%= score%></h3>
+        <h3 class = "h3Score">Your Score: <%= score%></h3>
 
 
 
