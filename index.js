@@ -40,7 +40,6 @@ app.post("/my_trivia", urlencodedParser, (req, res) => {
     if(req.body.firstQ === 'a'){
         score++;
         console.log(score);
-        res.send({message: '<h3>Score is: ' + score + '</h3>'})
     }
     if(req.body.secondQ === 'b'){
         score++;
@@ -49,7 +48,7 @@ app.post("/my_trivia", urlencodedParser, (req, res) => {
     }
     
 
-    res.render('my_trivia', {qs:req.query});
+    res.render('my_trivia', {qs:req.query}, {score});
 });
 
 
