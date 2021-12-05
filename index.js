@@ -33,19 +33,17 @@ app.get("/my_blog", (req, res) => {
 });
 
 app.get("/my_trivia", (req, res) => {
-
+    app.locals.score = 0;
     res.render("my_trivia");
 });
-app.locals.score = 0;
+
 app.post("/my_trivia", urlencodedParser, (req, res) => {
     if(req.body.firstQ === 'a'){
         app.locals.score++;
-        console.log(app.locals.score);
         
     }
     if(req.body.secondQ === 'b'){
-        app.locals.score++;
-        console.log(app.locals.score);
+        app.locals.score++;    
         
     }
     
