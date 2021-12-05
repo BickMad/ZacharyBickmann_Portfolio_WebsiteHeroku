@@ -35,6 +35,7 @@ app.get("/my_trivia", (req, res) => {
 
 app.post("/my_trivia", urlencodedParser, [
         check('firstQ').isLength({min:1}),
+        check('secondQ').isLength({min:1}),
 
 ], (req, res) => {
     const errors = validationResult(req)
