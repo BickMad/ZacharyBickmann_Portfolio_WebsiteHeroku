@@ -83,7 +83,11 @@ button{
     text-align: center;
     color: #00154f;
 }
-
+h3{
+    text-align: center;
+    display: block;
+    background-color: #00154f;
+}
 
 
 
