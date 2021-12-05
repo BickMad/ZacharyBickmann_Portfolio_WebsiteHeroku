@@ -2,6 +2,9 @@ const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require('body-parser');
 const { check, validationResult, body} = require('express-validator');
+const jsdom = require("jsdom");
+
+
 
 const app = express();
 //Stuff for server
@@ -36,7 +39,6 @@ app.get("/my_trivia", (req, res) => {
 app.post("/my_trivia", urlencodedParser, (req, res) => {
     console.log(req.body.firstQ);
     let score = 0;
-    var disScore = document.querySelector("h3Score");
     if(req.body.firstQ === 'a'){
         score++;
         console.log(score);
@@ -49,7 +51,7 @@ app.post("/my_trivia", urlencodedParser, (req, res) => {
     }
     
 
-    res.render('my_trivia', {qs:req.query}, {score});
+    res.render('my_trivia', {qs:req.query}, {theScore:score});
 });
 
 
