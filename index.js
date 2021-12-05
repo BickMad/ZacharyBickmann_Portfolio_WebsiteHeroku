@@ -34,13 +34,13 @@ app.get("/my_trivia", (req, res) => {
 });
 
 app.post("/my_trivia", urlencodedParser, [
-    check('firstQ')
-        .notEmpty()
+        check('firstQ').isLength({min:1}),
+        check('secondQ').isLength({min: 1})
 
 ], (req, res) => {
     const errors = validationResult(req)
     if(!errors.isEmpty()) {
-        return res.status(422).jsonp(errors.array())
+        return res.status(422).json({errors: errors.array()})
     }
 
 
