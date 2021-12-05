@@ -33,20 +33,9 @@ app.get("/my_trivia", (req, res) => {
     res.render("my_trivia");
 });
 
-app.post("/my_trivia", urlencodedParser, [
-        check('firstQ').isLength({min:1}),
-        check('secondQ').isLength({min:1}),
-       
-
-], (req, res) => {
-    const errors = validationResult(req)
-    let score = 0
-    if(!errors.isEmpty()) {
-        return res.status(422).json({errors: errors.array()})
-    }
-    console.log(post.firstQ)
-
-
+app.post("/my_trivia", urlencodedParser, (req, res) => {
+    console.log(req.body);
+    res.render('my_trivia', {qs:req.query});
 });
 
 
