@@ -34,8 +34,8 @@ app.get("/my_trivia", (req, res) => {
 });
 
 app.post("/my_trivia", urlencodedParser, [
-    check('firstQ', 'Be sure to type your answer for Q1, also your answer should be no more or less than 1 character' )
-        .isLength({max: 3 })
+    check('firstQ')
+        .notEmpty()
 
 ], (req, res) => {
     const errors = validationResult(req)
