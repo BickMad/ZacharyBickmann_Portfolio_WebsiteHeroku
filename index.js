@@ -1,7 +1,7 @@
 const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require('body-parser');
-const{check, validationResult} = require('express-validator');
+const { check, validationResult} = require('express-validator');
 
 const app = express();
 //Stuff for server
@@ -33,21 +33,20 @@ app.get("/my_trivia", (req, res) => {
     res.render("my_trivia");
 });
 
-app.post("/my_trivia", urlencodedParser,[
+app.post("/my_trivia", urlencodedParser, [
     check('firstQ', 'Be sure to type your answer for Q1, also your answer should be no more or less than 1 character' )
-        .exists()
-        .isLength({min: 3 })
+        .isLength({max: 3 })
 
 ], (req, res) => {
     const errors = validationResult(req)
-    if(!errors.isEmpty()){
+    if(!errors.isEmpty()) {
         return res.status(422).jsonp(errors.array())
     }
 
 
-})
+});
 
 
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log('Server is running on ${PORT}'));
+app.listen(PORT, () => console.log('Server is running on ${port}'));
