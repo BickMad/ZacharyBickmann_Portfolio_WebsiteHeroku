@@ -37,17 +37,16 @@ app.get("/my_trivia", (req, res) => {
 });
 
 app.post("/my_trivia", urlencodedParser, (req, res) => {
-    console.log(req.body.firstQ);
-    let score = 0;
+    var score = 0;
     if(req.body.firstQ === 'a'){
         score++;
         console.log(score);
-        disScore.innerHTML = "Score: " + score;
+        
     }
     if(req.body.secondQ === 'b'){
         score++;
         console.log(score);
-        disScore.innerHTML = "Score: " + score;
+        
     }
     
 
