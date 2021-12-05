@@ -34,7 +34,8 @@ app.get("/my_trivia", (req, res) => {
 });
 
 app.post("/my_trivia", urlencodedParser, (req, res) => {
-    console.log(req.body);
+    console.log(req.body.firstQ);
+
     res.render('my_trivia', {qs:req.query});
 });
 
