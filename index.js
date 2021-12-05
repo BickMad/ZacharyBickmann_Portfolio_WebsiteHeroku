@@ -40,6 +40,10 @@ app.post("/my_trivia", urlencodedParser, (req, res) => {
         score++;
         console.log(score);
     }
+    if(req.body.secondQ === 'b'){
+        score++;
+        console.log(score);
+    }
 
     res.render('my_trivia', {qs:req.query});
 });
