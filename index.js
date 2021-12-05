@@ -50,7 +50,7 @@ app.post("/my_trivia", urlencodedParser, (req, res) => {
     }
     
 
-    res.render('my_trivia', {qs:req.query}, {theScore:score});
+    res.render('my_trivia', {qs:req.query}, {score:score});
 });
 
 
