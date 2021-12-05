@@ -1,7 +1,7 @@
 const express = require("express");
 const ejs = require("ejs");
 const bodyParser = require('body-parser');
-const { check, validationResult} = require('express-validator');
+const { check, validationResult, body} = require('express-validator');
 
 const app = express();
 //Stuff for server
@@ -39,8 +39,17 @@ app.post("/my_trivia", urlencodedParser, [
 
 ], (req, res) => {
     const errors = validationResult(req)
+    let score = 0
     if(!errors.isEmpty()) {
         return res.status(422).json({errors: errors.array()})
+    }
+    if(body('firstQ').isIn(['a'])){
+        score++
+        return score
+    }
+    if(body('secondQ').isIn(['b'])){
+        score++
+        return score
     }
 
 
